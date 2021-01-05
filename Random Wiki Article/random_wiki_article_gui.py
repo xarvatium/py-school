@@ -7,14 +7,14 @@ from os import path
 window = tk.Tk()
 window.title("Random Wikipedia Article Generator")
 window.geometry("350x400")
-window.configure(bg="gray")
-disclaim = tk.Label(text = "Disclaimer: This is still in development so expect bugs", fg="red", bg="gray")
+window.configure(bg="AntiqueWhite2")
+disclaim = tk.Label(text = "Disclaimer: This is still in development so expect bugs", fg="red", bg="AntiqueWhite2")
 disclaim.grid(column=0,row=19)
 def getPage():
     global wikipage
     wikipage = wikipedia.random(1)
     article = wikipedia.summary(wikipage)
-    text_area = tk.Text(master=window,height=15,width=40)
+    text_area = tk.Text(master=window,height=15,width=40, bg="AntiqueWhite1", fg="gray10")
     text_area.grid(column=0,row=5)
     text_area.insert(tk.END,article)
 def openWeb():
@@ -42,15 +42,15 @@ def saveFav():
         json.dump(favorites, favraw, indent=4, ensure_ascii=False)
 
 
-button1 = tk.Button(text="Generate a Wiki Article",bg="gray",command=getPage)
+button1 = tk.Button(text="Generate a Wiki Article",bg="AntiqueWhite2",fg="gray10",command=getPage)
 button1.grid(column=0,row=1)
-button2 = tk.Button(text = "Save to Favorites",bg="gray",command=saveFav)
+button2 = tk.Button(text = "Save to Favorites",bg="AntiqueWhite2",fg="gray10",command=saveFav)
 button2.grid(column=0,row=2)
-button3 = tk.Button(text = "Open in Web Browser",bg="gray",command=openWeb)
+button3 = tk.Button(text = "Open in Web Browser",bg="AntiqueWhite2",fg="gray10",command=openWeb)
 button3.grid(column=0,row=3)
 label = tk.Label(text="I know some of the dimensions are weird\n but it's difficult to get exact measurements")
 label.grid(column=0,row=4)
-label.configure(bg="gray")
+label.configure(bg="AntiqueWhite2",fg="gray10")
 
 window.mainloop()
 
