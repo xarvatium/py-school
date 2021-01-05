@@ -8,6 +8,8 @@ window = tk.Tk()
 window.title("Random Wikipedia Article Generator")
 window.geometry("350x400")
 window.configure(bg="gray")
+disclaim = tk.Label(text = "Disclaimer: This is still in development so expect bugs", fg="red", bg="gray")
+disclaim.grid(column=0,row=19)
 def getPage():
     global wikipage
     wikipage = wikipedia.random(1)
@@ -49,5 +51,6 @@ button3.grid(column=0,row=3)
 label = tk.Label(text="I know some of the dimensions are weird\n but it's difficult to get exact measurements")
 label.grid(column=0,row=4)
 label.configure(bg="gray")
+
 window.mainloop()
 
