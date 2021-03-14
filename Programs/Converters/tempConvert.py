@@ -28,8 +28,7 @@ def KToC(K = float):
     print(f'The temperature is {C}°C')
 
 
-bool = True
-while bool is True:
+while True:
     userinput = input("What unit do you have? (C/F/K, or 'z' to exit) ").lower()
 
     if userinput == "c":
